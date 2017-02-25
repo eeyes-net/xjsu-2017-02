@@ -1,0 +1,179 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: 微软雅黑;
+	color: black;
+	box-sizing: border-box;
+}
+section{
+	clear: both;
+}
+@media screen and (min-width: 1366px){
+	.main-part{
+		margin: 0 auto;
+		/*width: 1200px;*/
+	}
+}
+header{
+	height: 128px;
+}
+.logo{
+	float: left;
+	width: 400px;
+	height: 100%;
+}
+.right-side{
+	margin-left: 400px;
+	height: 100%;
+	/*color: #edf0ef;*/
+}
+.tech-support{
+	height: 48px;
+	background-color: #edf0ef;
+}
+.tech-support > img{
+	float: right;
+}
+.ts-title{
+	font-size: 12px;
+	float: right;
+}
+nav{
+	background-color: #f7faf9;
+}
+.nav-title{
+	float: right;
+	padding: 0 24px;
+	width: 120px;
+	height: 80px;
+	font-size: 16px;
+	line-height: 80px;
+	text-align: center;
+}
+.position{
+	font-size:14px;
+}
+.title > p{
+	text-align:left;
+	color: #26997c
+}
+.main{
+	width: 80%;
+	margin:0 auto;
+}
+.main p{
+	font-size:16px;
+}
+.main a{
+	font-size:16px;
+}
+.title > p{
+	font-size:36px;
+	margin-top:54px;
+	margin-bottom: 25px;
+}
+.author p{
+	float: left;
+	margin-right: 14px;
+}
+.author img{
+	float: left;
+	padding-top: 5px;
+	margin-right:6px;
+}
+.content{
+	float: left;
+}
+.content img{
+	display:block;
+	margin:0 auto;
+}
+.content li{
+	font-weight:bold;
+	font-size:20px;
+	color: #26997c;
+	margin-top: 36px;
+	margin-bottom: 36px;
+}
+.content ol>li{
+	margin-left: 22px;
+	list-style-type:disc;
+}
+.content ul>li{
+	margin-left: 24px;
+	list-style-type:demical;
+}
+.content p{
+	line-height:150%;
+	margin-top:18px;
+	margin-bottom: 18px;
+}
+.share{
+	margin-top:30px;
+}
+.share p{
+	float: right;
+}
+.share img{
+	float: right;
+	margin-left: 16px;
+}
+.next{
+	margin-top:60px;
+}
+.next p {
+	line-height:20px;
+	float: left;
+	color:#6c8076;
+	padding-right:20px;
+}
+footer{
+	width: 80%;
+	margin:0 auto;
+}
+.wechat{
+	float: left;
+	width:50%;
+	font-size: 11px;
+	text-align:center;
+	margin-top:108px;
+}
+.wechat img{
+	padding-top:25px;
+	display:block;
+	margin: 0 auto;
+}
+.wechat_1{
+	padding-left:25%;
+}
+.wechat_2{
+	padding-right:25%;
+}
+footer a{
+	color:#6c8076;
+}
+footer a+a{
+	text-align:center;
+	margin-left: 16px;
+}
+.copyright{
+	margin-top:16px;
+	font-size:12px;
+	text-align:center;
+}
+.gray{
+	color:#acbfba;
+}
+.green{
+	color:#26997c;
+}
+.clearfix:after{
+	content:".";
+	visibility:hidden;
+	display:block;
+	height:0;
+	clear:both;
+}

@@ -1,0 +1,21 @@
+<img id="input_img" src="">
+<input id="input_img_url" type="text">
+<form target="edui_iframe__" method="POST" enctype="multipart/form-data" action="/ueditor/php/controller.php?action=uploadimage">
+    <input type="file" accept="image/*" name="upfile">
+    <input type="submit" value="上传">
+</form>
+<iframe id="edui_iframe__" name="edui_iframe__" style="display:none;width:0;height:0;border:0;margin:0;padding:0;position:absolute;"></iframe>
+<script>
+    var edui_iframe__ = document.getElementById('edui_iframe__');
+    edui_iframe__.addEventListener('load', function () {
+        var edui_iframe__body = (edui_iframe__.contentDocument || edui_iframe__.contentWindow.document).body;
+        var responseText = edui_iframe__body.innerText || edui_iframe__body.textContent || "";
+        var responseJsonObject = new Function("return " + responseText)();
+        if ("SUCCESS" == responseJsonObject.state && responseJsonObject.url) {
+            var input_img = document.getElementById('input_img');
+            var input_img_url = document.getElementById('input_img_url');
+            input_img_url.value = responseJsonObject.url;
+            input_img.src = responseJsonObject.url;
+        }
+    });
+</script>
