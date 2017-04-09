@@ -1,37 +1,43 @@
-<div class="news">
-    <div class="main-title title-left">
-        <p class="mt-number">NO.1</p>
-        <p class="mt-word">新闻公告</p>
-    </div>
-    <section></section>
-    <div class="news-title">
-        <div class="news-padding"></div>
-        @foreach($news as $i => $news1)
-            @if(($i & 1) == 0)
-                <div class="news-title-left">
-                    <p class="nt-word">{{ $news1->title }}</p>
-                    <p class="news-time">{{ $news1->created_at }}</p>
-                </div>
-            @else
-                <div class="news-title-right">
-                    <p class="nt-word">{{ $news1->title }}</p>
-                    <p class="news-time">{{ $news1->created_at }}</p>
-                </div>
-                <section></section>
-            @endif
-        @endforeach
-        <section></section>
-        <div class="ti-padding"></div>
-        <div class="content-index news-index">
-            <div class="index ni-a1">
-                <ul>
-                    <li class="content-active"><a>1</a></li>
-                    <li><a>2</a></li>
-                    <li><a>3</a></li>
-                </ul>
-            </div>
-            <a href="#"><img src="{{ asset('img/箭头右.png') }}"></a>
+<section class="main-section news" id="news">
+    <div class="main-section-title-container left">
+        <div class="main-section-title">
+            <div class="main-section-title-number">NO.1</div>
+            <h1 class="main-section-title-text">新闻公告</h1>
         </div>
     </div>
-    <section></section>
-</div>
+    <div class="news-section-body">
+        <div class="news-container main-section-list">
+            @foreach($news as $news1)
+                <div class="main-section-list-block">
+                    <a href="{{ action('PostController@show', ['id' => $news1->id]) }}">
+                        <div class="main-section-list-content">
+                            <h1 class="main-section-list-title">{{ $news1->title }}</h1>
+                            <div class="main-section-list-info">{{ $news1->created_at }}</div>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+    </div>
+    <div class="main-section-button-group">
+        <div class="main-section-shift-button-container">
+            <button class="main-section-shift-button"><img class="main-section-shift-button-image" src="/assets/index/images/list-page-pre.png" alt="上一页"></button>
+        </div>
+        <div class="main-section-ordered-button-container">
+            <ol class="main-section-ordered-button-ol">
+                <li class="main-section-ordered-button-li">
+                    <button class="main-section-ordered-button">1</button>
+                </li>
+                <li class="main-section-ordered-button-li">
+                    <button class="main-section-ordered-button active">2</button>
+                </li>
+                <li class="main-section-ordered-button-li">
+                    <button class="main-section-ordered-button">3</button>
+                </li>
+            </ol>
+        </div>
+        <div class="main-section-shift-button-container">
+            <button class="main-section-shift-button"><img class="main-section-shift-button-image" src="/assets/index/images/list-page-next.png" alt="上一页"></button>
+        </div>
+    </div>
+</section>

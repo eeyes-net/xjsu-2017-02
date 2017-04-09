@@ -1,80 +1,49 @@
-<!-- 精品活动 -->
-<div class="sp-commit">
-    <div class="main-title title-right"><p class="mt-number">NO.2</p>
-        <p class="mt-word">精品推送</p></div>
-    <section></section>
-    <div class="pw-content">
-        <ul>
-            <div class="pwi">
-                <img src="{{ asset('img/wechat/wechat-picture1.png') }}">
-                <div class="nt-word sc-title">不超过15字的标题</div>
-                <div class="news-time sc-title">
-                    <img src="{{ asset('img/sc-time.png') }}">
-                    <span>发布时间</span>
-                    <img src="{{ asset('img/sc-look.png') }}">
-                    <span>浏览量</span>
-                </div>
-            </div>
-            <div class="pwi">
-                <img src="{{ asset('img/wechat/wechat-picture2.png') }}">
-                <div class="nt-word sc-title">不超过15字的标题</div>
-                <div class="news-time sc-title">
-                    <img src="{{ asset('img/sc-time.png') }}">
-                    <span>发布时间</span>
-                    <img src="{{ asset('img/sc-look.png') }}">
-                    <span>浏览量</span>
-                </div>
-            </div>
-            <div class="pwi">
-                <img src="{{ asset('img/wechat/wechat-picture2.png') }}">
-                <div class="nt-word sc-title">不超过15字的标题</div>
-                <div class="news-time sc-title">
-                    <img src="{{ asset('img/sc-time.png') }}">
-                    <span>发布时间</span>
-                    <img src="{{ asset('img/sc-look.png') }}">
-                    <span>浏览量</span>
-                </div>
-            </div>
-            <div class="pwi">
-                <img src="{{ asset('img/wechat/wechat-picture2.png') }}">
-                <div class="nt-word sc-title">不超过15字的标题</div>
-                <div class="news-time sc-title">
-                    <img src="{{ asset('img/sc-time.png') }}">
-                    <span>发布时间</span>
-                    <img src="{{ asset('img/sc-look.png') }}">
-                    <span>浏览量</span>
-                </div>
-            </div>
-            <div class="pwi">
-                <img src="{{ asset('img/wechat/wechat-picture2.png') }}">
-                <div class="nt-word sc-title">不超过15字的标题</div>
-                <div class="news-time sc-title">
-                    <img src="{{ asset('img/sc-time.png') }}">
-                    <span>发布时间</span>
-                    <img src="{{ asset('img/sc-look.png') }}">
-                    <span>浏览量</span>
-                </div>
-            </div>
-            <div class="pwi">
-                <img src="{{ asset('img/wechat/wechat-picture2.png') }}">
-                <div class="nt-word sc-title">不超过15字的标题</div>
-                <div class="news-time sc-title">
-                    <img src="{{ asset('img/sc-time.png') }}">
-                    <span>发布时间</span>
-                    <img src="{{ asset('img/sc-look.png') }}">
-                    <span>浏览量</span>
-                </div>
-            </div>
-        </ul>
-    </div>
-    <div class="content-index sc-index">
-        <div class="index ni-a1">
-            <ul>
-                <li class="content-active"><a>1</a></li>
-                <li><a>2</a></li>
-                <li><a>3</a></li>
-            </ul>
+<section class="main-section push" id="push">
+    <div class="main-section-title-container right">
+        <div class="main-section-title">
+            <div class="main-section-title-number">NO.2</div>
+            <h1 class="main-section-title-text">精品推送</h1>
         </div>
-        <a href="#"><img src="{{ asset('img/箭头右.png') }}"></a>
     </div>
-</div>
+    <div class="main-section-body-photo-card">
+        <div class="main-section-photo-card-container">
+            @foreach($pushes as $push)
+            <div class="main-section-photo-card-block">
+                <a href="{{ action('PostController@show', ['id' => $push->id]) }}">
+                    <div class="main-section-photo-card-image-container">
+                        <img class="main-section-photo-card-image" src="{{ $push->getMeta('picture') }}" alt="精品推送标题图">
+                    </div>
+                    <div class="main-section-photo-card-detail">
+                        <h1 class="main-section-photo-card-title">{{ $push->title }}</h1>
+                        <div class="main-section-photo-card-info-container">
+                            <div class="main-section-photo-card-info time"><span class="main-section-photo-card-info-text">{{ $push->created_at }}</span></div>
+                            <div class="main-section-photo-card-info visit-count"><span class="main-section-photo-card-info-text">{{ $push->getMeta('visit_count') }}</span></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            @endforeach
+        </div>
+    </div>
+    <div class="main-section-button-group">
+        <div class="main-section-shift-button-container">
+            <button class="main-section-shift-button"><img class="main-section-shift-button-image" src="/assets/index/images/list-page-pre.png" alt="上一页"></button>
+        </div>
+        <div class="main-section-ordered-button-container">
+            <ol class="main-section-ordered-button-ol">
+                <li class="main-section-ordered-button-li">
+                    <button class="main-section-ordered-button">1</button>
+                </li>
+                <li class="main-section-ordered-button-li">
+                    <button class="main-section-ordered-button active">2</button>
+                </li>
+                <li class="main-section-ordered-button-li">
+                    <button class="main-section-ordered-button">3</button>
+                </li>
+            </ol>
+        </div>
+        <div class="main-section-shift-button-container">
+            <button class="main-section-shift-button"><img class="main-section-shift-button-image" src="/assets/index/images/list-page-next.png" alt="上一页"></button>
+        </div>
+    </div>
+</section>

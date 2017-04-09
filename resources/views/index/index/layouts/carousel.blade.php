@@ -1,17 +1,29 @@
-<!-- 轮播图 -->
-<carousel>
-    <div class="carousel-bg">
+<div class="carousel">
+    <div class="carousel-image-container">
         <ul>
-{{--            <li><a><img src="{{ asset('img/tmp.png') }}" class="carousel-former"></a></li>--}}
-            <li><a><img src="{{ asset('img/tmp.png') }}" class="carousel-img"></a></li>
-{{--            <li><a><img src="{{ asset('img/tmp.png') }}" class="carousel-latter"></a></li>--}}
+            <li class="carousel-image-li">
+                <img class="carousel-image" src="/assets/index/images/banner/1.png" alt="展示图">
+                <button class="carousel-image-button">了解更多</button>
+            </li>
         </ul>
     </div>
-</carousel>
-<div class="index carousel-index">
-    <ul>
-        <li class="c-active"><a>1</a></li>
-        <li><a>2</a></li>
-        <li><a>3</a></li>
-    </ul>
+    <div class="carousel-shift-button-container">
+        <div class="carousel-shift-button-group">
+            <button class="carousel-shift-button pre">&lt;</button>
+            <button class="carousel-shift-button next">&gt;</button>
+        </div>
+    </div>
+    <div class="carousel-ordered-button-group">
+        <ol class="carousel-ordered-button-ol">
+            <li class="carousel-ordered-button-li">
+                <button class="carousel-ordered-button">1</button>
+            </li>
+            <li class="carousel-ordered-button-li">
+                <button class="carousel-ordered-button active">2</button>
+            </li>
+            <li class="carousel-ordered-button-li">
+                <button class="carousel-ordered-button">3</button>
+            </li>
+        </ol>
+    </div>
 </div>
