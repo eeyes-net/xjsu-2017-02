@@ -1,17 +1,15 @@
 <div class="service-tab perspective" id="perspective">
     <div class="main-section-list">
-        <div class="main-section-list-block">
-            <a href="">
-                <div class="main-section-list-content">
-                    <h1 class="main-section-list-title">微视角的标题微视角的标题微视角的标题(within25words)</h1>
-                    <div class="main-section-list-info">2017/02/17</div>
-                </div>
-            </a>
-        </div>
+        @foreach($perspectives as $perspective)
+            <div class="main-section-list-block">
+                <a href="{{ action('PostController@show', ['id' => $perspective->id]) }}">
+                    <div class="main-section-list-content">
+                        <h1 class="main-section-list-title">{{ $perspective->title }}</h1>
+                        <div class="main-section-list-info">{{ $perspective->created_at }}</div>
+                    </div>
+                </a>
+            </div>
+        @endforeach
     </div>
-    <div class="service-tab-more">
-        <button class="service-tab-more-button">
-            <div class="service-tab-more-text">MORE</div>
-        </button>
-    </div>
+    @include('index.index.layouts.layouts.server_more_button')
 </div>

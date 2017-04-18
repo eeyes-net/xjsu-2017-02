@@ -1,9 +1,9 @@
 <div class="carousel">
     <div class="carousel-image-container">
-        <ul>
+        <ul class="carousel-image-ul">
             <li class="carousel-image-li">
                 <img class="carousel-image" src="/assets/index/images/banner/1.png" alt="展示图">
-                <button class="carousel-image-button">了解更多</button>
+                <a class="carousel-image-button" href="" target="_blank">了解更多</a>
             </li>
         </ul>
     </div>
@@ -16,13 +16,7 @@
     <div class="carousel-ordered-button-group">
         <ol class="carousel-ordered-button-ol">
             <li class="carousel-ordered-button-li">
-                <button class="carousel-ordered-button">1</button>
-            </li>
-            <li class="carousel-ordered-button-li">
-                <button class="carousel-ordered-button active">2</button>
-            </li>
-            <li class="carousel-ordered-button-li">
-                <button class="carousel-ordered-button">3</button>
+                <button class="carousel-ordered-button active" data-index="0">1</button>
             </li>
         </ol>
     </div>

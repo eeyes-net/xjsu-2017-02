@@ -15,6 +15,12 @@ Route::get('init', function () {
 });
 
 Route::get('/', 'IndexController@index')->name('home');
+Route::group(['prefix' => 'pjax'], function () {
+    Route::get('news', 'PjaxController@news');
+    Route::get('push', 'PjaxController@push');
+    Route::get('activity', 'PjaxController@activity');
+});
+
 Route::get('news', 'IndexController@news');
 
 Route::group(['prefix' => 'posts'], function () {

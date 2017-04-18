@@ -9,7 +9,7 @@
         <div class="contact-bg-wrapper"></div>
         <div class="contact-container">
             <div class="contact-form-container">
-                <form class="contact-form" action="">
+                <form class="contact-form" action="" method="POST">
                     <input class="contact-form-input contact-form-name" type="text" name="name" placeholder="您的称呼">
                     <input class="contact-form-input contact-form-contact" type="text" name="contact" placeholder="您的联系方式">
                     <textarea class="contact-form-input contact-form-content" name="content" placeholder="说点什么..."></textarea>

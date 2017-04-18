@@ -1,17 +1,15 @@
-<div class="service-tab main-section-list freshman" id="freshman">
+<div class="service-tab freshman" id="freshman">
     <div class="main-section-list">
-        <div class="main-section-list-block">
-            <a href="">
-                <div class="main-section-list-content">
-                    <h1 class="service-tab-freshman-list-title"><span>介绍篇</span></h1>
-                    <div class="service-tab-freshman-list-info">介绍篇的内容简介，介绍篇的内容简介，介绍篇的内容简介，介绍篇的内容简介。</div>
-                </div>
-            </a>
-        </div>
+        @foreach($freshmen as $freshman)
+            <div class="main-section-list-block">
+                <a href="{{ action('PostController@show', ['id' => $freshman->id]) }}">
+                    <div class="main-section-list-content">
+                        <h1 class="service-tab-freshman-list-title"><span>{{ $freshman->title }}</span></h1>
+                        <div class="service-tab-freshman-list-info">{{ mb_substr(html_to_text($freshman->body), 0, 30) }}</div>
+                    </div>
+                </a>
+            </div>
+        @endforeach
     </div>
-    <div class="service-tab-more">
-        <button class="service-tab-more-button">
-            <div class="service-tab-more-text">MORE</div>
-        </button>
-    </div>
+    @include('index.index.layouts.layouts.server_more_button')
 </div>

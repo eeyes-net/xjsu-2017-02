@@ -1,5 +1,5 @@
 <div class="copyright">
-    <span class="copyright-span-copyright">CopyRight</span> @WBJ@Ganlv
+    <span class="copyright-span-copyright">CopyRight</span> @WBJ @Ganlv
 </div>
 
 <footer class="footer">
@@ -15,7 +15,7 @@
     </div>
     <div class="footer-copyright">
         <p>版权所有：<strong>西安交通大学学生会</strong></p>
-        <p>技术支持：<strong>西安交通大学 e瞳网</strong></p>
+        <p>技术支持：<strong>西安交通大学e瞳网</strong></p>
     </div>
     <div class="footer-link">
         <a href="javascript:">联系我们</a>

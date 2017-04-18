@@ -186,15 +186,16 @@ body {
     position: absolute;
     top: 254px;
     left: 50%;
-    margin-left: -96px;
-    width: 192px;
-    height: 50px;
+    margin-left: -92px;
+    width: 184px;
+    height: 42px;
     color: #fff;
+    background-color: transparent;
     font-size: 20px;
     font-weight: bolder;
-    box-sizing: border-box;
     border: 4px solid #fff;
-    background-color: transparent;
+    line-height: 40px;
+    text-align: center;
 }
 
 .carousel-shift-button-container {
@@ -392,6 +393,7 @@ body {
 
 .main-section-photo-card-image-container {
     height: 200px;
+    background-color: #fff;
 }
 
 .main-section-photo-card-image {
@@ -400,26 +402,21 @@ body {
 }
 
 .main-section-photo-card-detail {
-    position: relative;
     padding: 36px 24px;
-    height: 124px;
     background-color: #fff;
     box-sizing: border-box;
 }
 
 .main-section-photo-card-title {
-    position: absolute;
-    left: 24px;
-    top: 36px;
+    height: 18px;
     font-size: 18px;
     font-weight: bold;
     line-height: 1;
 }
 
 .main-section-photo-card-info-container {
-    position: absolute;
-    left: 24px;
-    bottom: 36px;
+    height: 15px;
+    margin-top: 24px;
     color: #acbfba;
     font-size: 12px;
 }
@@ -484,6 +481,7 @@ body {
     padding: 0 36px 0 18px;
     font-size: 12px;
     box-sizing: border-box;
+    vertical-align: top;
 }
 
 .main-section-list-content {
@@ -501,8 +499,11 @@ body {
 }
 
 .main-section-list-title {
+    height: 20px;
     color: #2d403b;
+    font-size: 20px;
     font-weight: bold;
+    line-height: 1;
 }
 
 .main-section-list-info {
@@ -904,7 +905,7 @@ body {
     width: 100%;
     height: 9999px;
     margin-bottom: -9999px;
-    background: url(../images/bg-contact-wrapper.gif);
+    background: url(../images/bg-contact-wrapper.gif) fixed;
 }
 
 .contact-container {
@@ -998,12 +999,14 @@ footer {
 }
 
 .footer-qrcode-container {
+    font-size: 0;
     text-align: center;
 }
 
 .footer-qrcode-block {
     display: inline-block;
     width: 253px;
+    font-size: 12px;
 }
 
 .footer-qrcode-title {
@@ -1042,11 +1045,12 @@ footer {
 
 .footer-link {
     margin-top: 24px;
-    font-size: 12px;
+    font-size: 0;
     text-align: center;
 }
 
 .footer-link a {
     color: #6c8076;
-    margin: 0 8px;
+    margin: 0 10px;
+    font-size: 12px;
 }
