@@ -41,8 +41,10 @@ class OptionController extends Controller
     {
         $value = request('value');
         switch ($name) {
+            case 'departments':
             case 'links':
             case 'nav':
+            case 'presidium':
                 $value_no_blank = [];
                 foreach ($value as $value1) {
                     $flag = true;

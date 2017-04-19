@@ -12,6 +12,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create('zh_TW');
-        $faker->realText('15');
+        $user = App\User::find(1);
+        for ($i = 0; $i < 10; ++$i) {
+            $user->publish(new App\Post([
+                'title' => $faker->realText('15'),
+                'body' => $faker->realText('200'),
+            ]));
+        }
     }
 }

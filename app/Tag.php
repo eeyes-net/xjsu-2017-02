@@ -10,4 +10,16 @@ class Tag extends Model
     {
         return $this->belongsToMany(Post::class);
     }
+
+    /**
+     * 找到指定名称的标签
+     *
+     * @param string $name
+     *
+     * @return mixed
+     */
+    public static function findName($name)
+    {
+        return self::where('name', $name)->first();
+    }
 }

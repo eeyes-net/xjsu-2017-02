@@ -49,7 +49,7 @@
                         <form action="{{ action('Admin\OptionController@update', ['name' => 'no_register']) }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('PATCH') }}
-                            <input type="hidden" name="value" value="1">
+                            <input type="hidden" name="value" value="0">
                             <div class="form-group">
                                 <button type="submit" class="btn btn-success">允许注册</button>
                             </div>
