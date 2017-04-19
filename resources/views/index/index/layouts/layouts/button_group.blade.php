@@ -5,10 +5,10 @@
     <div class="main-section-ordered-button-container">
         <ol class="main-section-ordered-button-ol">
             <li class="main-section-ordered-button-li">
-                <button class="main-section-ordered-button">1</button>
+                <button class="main-section-ordered-button active">1</button>
             </li>
             <li class="main-section-ordered-button-li">
-                <button class="main-section-ordered-button active">2</button>
+                <button class="main-section-ordered-button">2</button>
             </li>
             <li class="main-section-ordered-button-li">
                 <button class="main-section-ordered-button">3</button>

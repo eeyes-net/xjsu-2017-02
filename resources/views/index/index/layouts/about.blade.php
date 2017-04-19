@@ -62,14 +62,16 @@
             <table class="about-minister-table" cellpadding="0" cellspacing="0">
                 <tbody>
                     <tr>
-                        <td>
-                            <a href="">
-                                <div class="about-minister-card">
-                                    <img class="about-minister-image" src="/assets/index/images/minister/socialvolunteer.png" alt="部门图片">
-                                    <h1 class="about-minister-name">社会服务部</h1>
-                                </div>
-                            </a>
-                        </td>
+                        @foreach($ministers as $minister)
+                            <td>
+                                <a href="{{ action('PostController@show', ['id' => $minister->id]) }}">
+                                    <div class="about-minister-card">
+                                        <img class="about-minister-image" src="{{ $minister->getMeta('picture') }}" alt="部门图片">
+                                        <h1 class="about-minister-name">{{ $minister->title }}</h1>
+                                    </div>
+                                </a>
+                            </td>
+                        @endforeach
                     </tr>
                 </tbody>
             </table>
