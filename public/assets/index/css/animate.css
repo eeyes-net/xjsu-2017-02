@@ -1,0 +1,75 @@
+@keyframes flipDownInX {
+    from {
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        opacity: 0;
+    }
+    to {
+        transform: perspective(400px) rotate3d(1, 0, 0, 0);
+        opacity: 1;
+    }
+}
+
+.flipDownInX {
+    animation: flipDownInX .2s ease-out;
+}
+
+.flipUpOutX {
+    animation: flipDownInX .2s ease-out reverse;
+}
+
+@keyframes flipDownOutX {
+    from {
+        transform: perspective(400px) rotate3d(1, 0, 0, 0);
+        opacity: 1;
+    }
+    to {
+        transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
+        opacity: 0;
+    }
+}
+
+.flipDownOutX {
+    animation: flipDownOutX .2s ease-out;
+}
+
+.flipUpInX {
+    animation: flipDownOutX .2s ease-out reverse;
+}
+
+@keyframes slideRightInX {
+    from {
+        transform: translate(1366px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+.slideRightInX {
+    animation: slideRightInX .5s ease-out;
+}
+
+.slideRightOutX {
+    animation: slideRightInX .5s reverse ease-out;
+}
+
+@keyframes slideLeftOutX {
+    from {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-1366px, 0);
+        opacity: 0;
+    }
+}
+
+.slideLeftOutX {
+    animation: slideLeftOutX .5s ease-in;
+}
+
+.slideLeftInX {
+    animation: slideLeftOutX .5s reverse ease-in;
+}

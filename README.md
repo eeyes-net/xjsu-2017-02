@@ -24,6 +24,13 @@
 
 * 本项目使用`Laravel 5.4`作为开发框架
 
+## 开发人员
+
+* 产品：tsgyhwxh
+* 视觉：WBJ
+* 前端：Ganlv <https://github.com/ganlvtech>
+* 后端：Ganlv <https://github.com/ganlvtech>
+
 ## LICENSE
 
 [MIT license](http://opensource.org/licenses/MIT).
