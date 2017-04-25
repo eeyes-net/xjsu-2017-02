@@ -67,10 +67,17 @@
 
 .post-title-info-container {
     margin-top: 12px;
+    font-size: 0;
 }
 
 .post-title-info {
+    margin-left: 10px;
     display: inline-block;
+    font-size: 14px;
+}
+
+.post-title-info:nth-child(1) {
+    margin-left: 0;
 }
 
 .post-title-info::before {
