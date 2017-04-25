@@ -1,17 +1,25 @@
 @extends('index.layouts.master')
 
 @section('head-append')
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/propeling.css') }}">
+    <link rel="stylesheet" type="text/css" href="/assets/index/css/post.css">
 @stop
 
 @section('header')
     @include('index.layouts.header')
-    <div class="position">
-        <a href="">首页</a>
-        <img src="{{ asset('img/arrow.png') }}">
-        <a href="" class="green">品牌活动</a>
-        <img src="{{ asset('img/arrow.png') }}">
-        <a href="" class="gray">交大之星</a>
+    <div class="post-nav-container">
+        <div class="post-nav">
+            <div class="post-nav-path-container">
+                <a href="{{ action('IndexController@index') }}">
+                    <div class="post-nav-path home"><span class="post-nav-path-text">首页</span></div>
+                </a>
+                <a href="{{ action('PostController@index') }}">
+                    <div class="post-nav-path category"><span class="post-nav-path-text">全部推送</span></div>
+                </a>
+                <a href="{{ action('PostController@show', ['id' => $post->id]) }}">
+                    <div class="post-nav-path title"><span class="post-nav-path-text">{{ $post->title }}</span></div>
+                </a>
+            </div>
+        </div>
     </div>
 @stop
 

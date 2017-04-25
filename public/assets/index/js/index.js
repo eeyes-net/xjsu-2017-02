@@ -37,10 +37,10 @@ $(function () {
         $('.carousel-ordered-button[data-index="' + i + '"]').addClass('active');
     };
     $('.carousel-shift-button.pre').on('click', function () {
-        setCarousel(($('.carousel-image-ul').attr('data-index') || 0) - 1);
+        setCarousel((parseInt($('.carousel-image-ul').attr('data-index')) || 0) - 1);
     });
     $('.carousel-shift-button.next').on('click', function () {
-        setCarousel(($('.carousel-image-ul').attr('data-index') || 0) + 1);
+        setCarousel((parseInt($('.carousel-image-ul').attr('data-index')) || 0) + 1);
     });
     $('.carousel-ordered-button').on('click', function () {
         setCarousel($(this).attr('data-index'));

@@ -4,9 +4,11 @@
         <div class="nav-bg-link"></div>
     </div>
     <div class="nav-container">
-        <div class="nav-logo">
-            <img class="nav-logo-image" src="/assets/index/images/logo-xjsu.png" alt="西安交通大学学生会logo">
-        </div>
+        <a href="{{ action('IndexController@index') }}">
+            <div class="nav-logo">
+                <img class="nav-logo-image" src="/assets/index/images/logo-xjsu.png" alt="西安交通大学学生会logo">
+            </div>
+        </a>
         <div class="nav-tech">
             <span class="nav-tech-span">技术支持</span>
             <span class="nav-tech-span"><a target="_blank" href="http://www.eeyes.net/"><img src="/assets/index/images/logo-eeyes.png" alt="e瞳网logo"></a></span>

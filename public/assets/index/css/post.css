@@ -1,0 +1,124 @@
+.post-nav-container {
+    margin-top: 36px;
+    background-color: #f7faf9;
+}
+
+.post-nav {
+    margin: 0 auto;
+    width: 1200px;
+    font-size: 0;
+}
+
+.post-nav-path-container {
+    display: inline-block;
+    padding-right: 6px;
+    background-color: #fff;
+}
+
+.post-nav-path {
+    display: inline-block;
+}
+
+.post-nav-path.category::before, .post-nav-path.title::before {
+    content: '';
+    display: inline-block;
+    margin: 0 8px;
+    width: 8px;
+    height: 12px;
+    background: url(../images/arrow.png) center;
+}
+
+.post-nav-path-text {
+    font-size: 16px;
+}
+
+.home .post-nav-path-text {
+    color: #6c8076;
+}
+
+.category .post-nav-path-text {
+    color: #26997c;
+}
+
+.title .post-nav-path-text {
+    color: #acbfba;
+}
+
+.post-container {
+    padding-top: 54px;
+}
+
+.post-title-container {
+    margin: 0 auto;
+    width: 768px;
+    color: #acbfba;
+    font-size: 16px;
+}
+
+.post-title {
+    height: 48px;
+    color: #26997c;
+    font-size: 36px;
+    text-align: left;
+    line-height: 1;
+    border-bottom: 2px solid #edf0ef;
+    box-sizing: border-box;
+}
+
+.post-title-info-container {
+    margin-top: 12px;
+}
+
+.post-title-info {
+    display: inline-block;
+}
+
+.post-title-info::before {
+    content: '';
+    display: inline-block;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.post-title-info.time::before {
+    width: 15px;
+    height: 15px;
+    background: url(../images/icon-time.png) center;
+}
+
+.post-title-info.author::before {
+    width: 15px;
+    height: 14px;
+    background: url(../images/icon-author.png) center;
+}
+
+.post-title-info.visit-count::before {
+    width: 15px;
+    height: 10px;
+    background: url(../images/icon-visit-count.png) center;
+}
+
+.post-title-info-text {
+    display: inline-block;
+    height: 1em;
+    max-width: 16em;
+    font-size: 14px;
+    line-height: 1;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.post-body-container {
+    margin-top: 36px;
+}
+
+.post-body {
+    width: 768px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.post-body img {
+    max-width: 600px !important;
+}

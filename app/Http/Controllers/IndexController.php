@@ -17,7 +17,7 @@ class IndexController extends Controller
         $xjsu_introduction = Option::getOption('xjsu_introduction');
         $news = Tag::findName('news')->posts()->latest()->limit(6)->get();
         $pushes = Tag::findName('push')->posts()->latest()->limit(3)->get();
-        $ministers = Tag::findName('minister')->posts()->get();
+        $ministers = Tag::findName('minister')->posts()->latest()->get();
         $activities = Tag::findName('activity')->posts()->latest()->limit(3)->get();
         $applies = Tag::findName('apply')->posts()->latest()->limit(6)->get();
         $perspectives = Tag::findName('perspective')->posts()->latest()->limit(6)->get();
