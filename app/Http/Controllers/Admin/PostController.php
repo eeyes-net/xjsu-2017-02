@@ -53,7 +53,7 @@ class PostController extends Controller
             new Post(request(['title', 'body']))
         );
         $metas = request('meta');
-        $tags = request('tags');
+        $tags = request('tags', []);
         $sync_tags = [];
         foreach ($tags as $tag_id => $value) {
             if ($value) {
