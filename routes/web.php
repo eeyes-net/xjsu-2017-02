@@ -28,7 +28,8 @@ Route::group(['prefix' => 'posts'], function () {
     Route::get('{id}', 'PostController@show');
 });
 
-Auth::routes();
+Route::get('login', 'Auth\LoginController@login')->name('login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/', 'IndexController@index');
