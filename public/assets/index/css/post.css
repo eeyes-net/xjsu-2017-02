@@ -56,11 +56,10 @@
 }
 
 .post-title {
-    height: 48px;
     color: #26997c;
+    padding-bottom: 3px;
     font-size: 36px;
     text-align: left;
-    line-height: 1;
     border-bottom: 2px solid #edf0ef;
     box-sizing: border-box;
 }
@@ -127,5 +126,7 @@
 }
 
 .post-body img {
+    display: block;
+    margin: 0 auto;
     max-width: 600px !important;
 }

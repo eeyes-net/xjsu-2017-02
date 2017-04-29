@@ -272,7 +272,7 @@ body {
 
 .main-section-title-container {
     width: 1200px;
-    margin: 108px auto 36px;
+    margin: 140px auto 36px;
 }
 
 .main-section-title-container.left {
@@ -313,7 +313,7 @@ body {
 /* main section button */
 
 .main-section-button-group {
-    margin: -32px auto 0;
+    margin: -32px auto;
     width: 1200px;
     height: 64px;
     font-size: 0;
@@ -618,11 +618,12 @@ body {
     display: block;
     top: 0;
     right: 0;
-    margin-top: -20px;
-    height: 20px;
+    margin-top: -2em;
+    height: 2em;
     color: #acbfba;
     background-color: #f7faf9;
     font-size: 16px;
+    line-height: 2;
 }
 
 /* about presidium */
