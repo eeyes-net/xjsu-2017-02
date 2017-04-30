@@ -32,7 +32,7 @@
                                 <a href="{{ action('Admin\\PostController@index') }}" class="btn btn-default">所有文章</a>
                             </div>
                             <div class="col-xs-6 text-center">
-                                <a href="{{ action('Admin\\OptionController@index') }}" class="btn btn-default">网站设置</a>
+                                <a href="{{ action('Admin\\OptionController@edit') }}" class="btn btn-default">网站设置</a>
                             </div>
                         </div>
                         <!-- /.row -->

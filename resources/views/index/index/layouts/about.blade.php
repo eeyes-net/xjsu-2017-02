@@ -15,7 +15,7 @@
         <h1 class="about-title"><span>学生会简介</span></h1>
         <div class="about-xjsu-introduce-body">
             <p class="about-xjsu-introduce-text">{{ $xjsu_introduction }}</p>
-            <div class="about-xjsu-introduce-more"><a href="javascript:">MORE&gt;&gt;</a></div>
+            <div class="about-xjsu-introduce-more"><a href="{{ action('PostController@show', ['id' => $xjsu_introduction_more]) }}">MORE&gt;&gt;</a></div>
         </div>
     </div>
     <div class="about-block presidium">
@@ -64,10 +64,10 @@
                     <tr>
                         @foreach($ministers as $minister)
                             <td>
-                                <a href="{{ action('PostController@show', ['id' => $minister->id]) }}">
+                                <a href="{{ action('PostController@show', ['id' => $minister['id']]) }}">
                                     <div class="about-minister-card">
-                                        <img class="about-minister-image" src="{{ $minister->getMeta('picture') }}" alt="部门图片">
-                                        <h1 class="about-minister-name">{{ $minister->title }}</h1>
+                                        <img class="about-minister-image" src="{{ \App\Post::find($minister['id'])->getMeta('picture') }}" alt="部门图片">
+                                        <h1 class="about-minister-name">{{ $minister['name'] }}</h1>
                                     </div>
                                 </a>
                             </td>

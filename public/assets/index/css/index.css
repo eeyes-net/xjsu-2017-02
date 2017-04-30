@@ -30,6 +30,7 @@ textarea {
 
 body {
     min-width: 1366px;
+    font-family: "微软雅黑", "黑体", sans-serif;
 }
 
 /* nav */
@@ -605,7 +606,6 @@ body {
 
 .about-xjsu-introduce-text {
     text-indent: 2em;
-    max-height: 80px;
     line-height: 2;
 }
 

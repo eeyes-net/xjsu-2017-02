@@ -9,7 +9,7 @@
     @include('index.index.layouts.about')
     @include('index.index.layouts.activity')
     @include('index.index.layouts.service')
-    @include('index.index.layouts.contact')
+{{--    @include('index.index.layouts.contact')--}}
 @stop
 @section('footer')
     @include('index.layouts.footer')

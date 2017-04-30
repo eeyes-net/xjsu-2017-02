@@ -21,7 +21,7 @@
                 <li class="nav-link-li"><a href="#about">组织介绍</a></li>
                 <li class="nav-link-li"><a href="#activity">品牌活动</a></li>
                 <li class="nav-link-li"><a href="#service">校园服务</a></li>
-                <li class="nav-link-li"><a class="active" href="#contact">联系我们</a></li>
+                <li class="nav-link-li"><a class="active" onclick="location.href = this.href;" href="{{ action('PostController@show', ['id' => $contact_us]) }}">联系我们</a></li>
             </ul>
         </div>
     </div>

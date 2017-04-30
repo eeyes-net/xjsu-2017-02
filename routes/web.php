@@ -25,6 +25,7 @@ Route::get('news', 'IndexController@news');
 
 Route::group(['prefix' => 'posts'], function () {
     Route::get('/', 'PostController@index');
+    Route::get('tags/{id}', 'PostController@tag');
     Route::get('{id}', 'PostController@show');
 });
 
@@ -44,8 +45,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::delete('{id}', 'PostController@destroy');
     });
     Route::group(['prefix' => 'options'], function () {
-        Route::get('/', 'OptionController@index');
-        Route::get('{name}', 'OptionController@edit');
-        Route::patch('{name}', 'OptionController@update');
+        Route::get('/', 'OptionController@edit');
+        Route::patch('/', 'OptionController@update');
     });
 });

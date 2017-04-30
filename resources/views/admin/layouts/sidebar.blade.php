@@ -63,12 +63,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ action('Admin\\OptionController@edit', ['name' => 'no_register']) }}">禁止注册</a></li>
-                    <li><a href="{{ action('Admin\\OptionController@edit', ['name' => 'xjsu_introduction']) }}">学生会简介</a></li>
-                    <li><a href="{{ action('Admin\\OptionController@edit', ['name' => 'links']) }}">网址速达</a></li>
-                    <li><a href="{{ action('Admin\\OptionController@edit', ['name' => 'nav']) }}">导航栏</a></li>
-                    <li><a href="{{ action('Admin\\OptionController@edit', ['name' => 'presidium']) }}">主席团链接</a></li>
-                    <li><a href="{{ action('Admin\\OptionController@edit', ['name' => 'departments']) }}">部门介绍链接</a></li>
+                    <li><a href="{{ action('Admin\\OptionController@edit') }}">设置</a></li>
                 </ul>
             </li>
         </ul>

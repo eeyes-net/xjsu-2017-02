@@ -12,8 +12,9 @@
                 <a href="{{ action('IndexController@index') }}">
                     <div class="post-nav-path home"><span class="post-nav-path-text">首页</span></div>
                 </a>
-                <a href="{{ action('PostController@index') }}">
-                    <div class="post-nav-path category"><span class="post-nav-path-text">全部推送</span></div>
+                <?php $tag = $post->tags()->first(); ?>
+                <a href="{{ action('PostController@tag', ['id' => $tag->id]) }}">
+                    <div class="post-nav-path category"><span class="post-nav-path-text">{{ $tag->slug }}</span></div>
                 </a>
                 <a href="{{ action('PostController@show', ['id' => $post->id]) }}">
                     <div class="post-nav-path title"><span class="post-nav-path-text">{{ $post->title }}</span></div>

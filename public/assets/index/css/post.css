@@ -123,6 +123,7 @@
     margin: auto;
     font-size: 18px;
     line-height: 2;
+    overflow: hidden;
 }
 
 .post-body img {

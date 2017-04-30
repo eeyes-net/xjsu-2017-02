@@ -18,8 +18,8 @@
         <p>技术支持：<strong>西安交通大学e瞳网</strong></p>
     </div>
     <div class="footer-link">
-        <a href="javascript:">联系我们</a>
-        <a href="javascript:">网站简介</a>
-        <a href="javascript:">e瞳网</a>
+        <a href="{{ action('PostController@show', ['id' => $contact_us]) }}">联系我们</a>
+        <a href="{{ action('PostController@show', ['id' => $about_website]) }}">网站简介</a>
+        <a target="_blank" href="http://www.eeyes.net/">e瞳网</a>
     </div>
 </footer>
