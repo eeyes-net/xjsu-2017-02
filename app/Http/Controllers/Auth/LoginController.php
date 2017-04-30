@@ -52,7 +52,11 @@ class LoginController extends Controller
 
     public function logout()
     {
-        Auth::logout();
-        return redirect(\phpCAS::getServerLogoutURL());
+        Auth::guard()->logout();
+        request()->session()->flush();
+        request()->session()->regenerate();
+        session_unset();
+        session_destroy();
+        return redirect(\phpCAS::getServerLogoutURL() . '?service=' . urlencode(action('IndexController@index')));
     }
 }

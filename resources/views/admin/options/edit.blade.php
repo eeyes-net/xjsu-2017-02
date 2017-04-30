@@ -33,8 +33,8 @@
                         </div>
                         <div class="box-body">
                             <div class="form-group">
-                                <label>标题</label>
-                                <input type="text" class="form-control" name="title" placeholder="标题" value="">
+                                <label>主页附加信息（非技术人员请勿修改！！）</label>
+                                <textarea class="form-control" name="body_prepend">{{ $body_prepend }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label>首页轮播图</label>

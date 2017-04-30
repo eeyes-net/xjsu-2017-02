@@ -14,12 +14,13 @@ class OptionController extends Controller
      */
     public function edit()
     {
+        $body_prepend = Option::getOption('body_prepend', '');
         $carousels = Option::getOption('carousels', []);
         $xjsu_introduction = Option::getOption('xjsu_introduction', '');
         $xjsu_introduction_more = Option::getOption('xjsu_introduction_more', '');
-        $ministers = Option::getOption('ministers', '');
-        $presidium = Option::getOption('presidium', '');
-        $links = Option::getOption('links', '');
+        $ministers = Option::getOption('ministers', []);
+        $presidium = Option::getOption('presidium', []);
+        $links = Option::getOption('links', []);
         $contact_us = Option::getOption('contact_us', '');
         $about_website = Option::getOption('about_website', '');
 
@@ -41,6 +42,7 @@ class OptionController extends Controller
         $links = implode("\n", $links);
 
         return view('admin.options.edit', compact(
+            'body_prepend',
             'carousels',
             'xjsu_introduction',
             'xjsu_introduction_more',
@@ -59,6 +61,7 @@ class OptionController extends Controller
      */
     public function update()
     {
+        $body_prepend = request('body_prepend', '');
         $carousels = request('carousels', '');
         $xjsu_introduction = request('xjsu_introduction', '');
         $xjsu_introduction_more = request('xjsu_introduction_more', '');
@@ -126,6 +129,7 @@ class OptionController extends Controller
             }
         }
 
+        Option::setOption('body_prepend', $body_prepend);
         Option::setOption('carousels', $carousels);
         Option::setOption('xjsu_introduction', $xjsu_introduction);
         Option::setOption('xjsu_introduction_more', $xjsu_introduction_more);

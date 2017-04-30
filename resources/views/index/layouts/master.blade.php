@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    {!! \App\Option::getOption('body_prepend', '') !!}
 
     @yield('header')
 
