@@ -132,7 +132,9 @@ class OptionController extends Controller
             }
         }
 
-        Option::setOption('body_prepend', $body_prepend);
+        if (auth()->user()->group === 'root') {
+            Option::setOption('body_prepend', $body_prepend);
+        }
         Option::setOption('carousels', $carousels);
         Option::setOption('member_count', $member_count);
         Option::setOption('xjsu_introduction', $xjsu_introduction);

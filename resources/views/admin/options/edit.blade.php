@@ -32,11 +32,13 @@
                             <h3 class="box-title">设置</h3>
                         </div>
                         <div class="box-body">
-                            <div class="form-group">
-                                <label>主页附加信息（非技术人员请勿修改！！）</label>
-                                <textarea class="form-control" name="body_prepend">{{ $body_prepend }}</textarea>
-                                <span class="help-block">body元素最开始的html内容</span>
-                            </div>
+                            @if (auth()->user()->group === 'root')
+                                <div class="form-group">
+                                    <label>主页附加信息（非技术人员请勿修改！！）</label>
+                                    <textarea class="form-control" name="body_prepend">{{ $body_prepend }}</textarea>
+                                    <span class="help-block">body元素最开始的html内容</span>
+                                </div>
+                            @endif
                             <div class="form-group">
                                 <label>首页轮播图</label>
                                 <textarea class="form-control" style="height: 10em;" name="carousels" placeholder="文章id||图片链接&#10;文章id||图片链接&#10;...">{{ $carousels }}</textarea>
