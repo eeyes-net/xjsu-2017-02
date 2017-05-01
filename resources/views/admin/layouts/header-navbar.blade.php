@@ -22,7 +22,7 @@
                         <img src="{{ asset('AdminLTE/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
 
                         <p>
-                            {{ auth()->user()->name }} - 网站管理员
+                            {{ auth()->user()->name }} - {{ auth()->user()->group }}
                         </p>
                     </li>
                     <!-- Menu Body -->

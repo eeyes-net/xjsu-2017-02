@@ -31,12 +31,28 @@ class UserController extends Controller
         return redirect($_SERVER['HTTP_REFERER']);
     }
 
+    public function update($id)
+    {
+        $my_user = auth()->user();
+        $user = User::find($id);
+        if ($my_user->id == $user->id) {
+            return redirect($_SERVER['HTTP_REFERER']);
+        }
+        if ($my_user->group === 'root' || $user->group != 'root') {
+            $user->group = request('group', 'user');
+            $user->save();
+        }
+        return redirect($_SERVER['HTTP_REFERER']);
+    }
+
     public function delete($id)
     {
-        $my_group = auth()->user()->group;
+        $my_user = auth()->user();
         $user = User::find($id);
-        $group = $user->group;
-        if ($my_group === 'root' || $group === 'admin') {
+        if ($my_user->id == $user->id) {
+            return redirect($_SERVER['HTTP_REFERER']);
+        }
+        if ($my_user->group === 'root' || $user->group != 'root') {
             $user->delete();
         }
         return redirect($_SERVER['HTTP_REFERER']);
