@@ -36,7 +36,7 @@
                             <div class="item">
                                 <p class="message">
                                     <a href="{{ action('Admin\PostController@edit', ['id' => $post->id]) }}" class="name">
-                                        <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> {{ $post->created_at }}</small>
+                                        <small class="text-muted pull-right">id= {{ $post->id }} | <i class="fa fa-clock-o"></i> {{ $post->created_at }}</small>
                                         <h4>{{ $post->title }}</h4>
                                     </a>
                                 </p>

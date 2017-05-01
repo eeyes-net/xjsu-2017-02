@@ -35,10 +35,16 @@
                             <div class="form-group">
                                 <label>主页附加信息（非技术人员请勿修改！！）</label>
                                 <textarea class="form-control" name="body_prepend">{{ $body_prepend }}</textarea>
+                                <span class="help-block">body元素最开始的html内容</span>
                             </div>
                             <div class="form-group">
                                 <label>首页轮播图</label>
                                 <textarea class="form-control" style="height: 10em;" name="carousels" placeholder="文章id||图片链接&#10;文章id||图片链接&#10;...">{{ $carousels }}</textarea>
+                                <span class="help-block">文章id||图片链接</span>
+                            </div>
+                            <div class="form-group">
+                                <label>学生会成员数</label>
+                                <input type="text" class="form-control" name="member_count" placeholder="191954" value="{{ $member_count }}">
                             </div>
                             <div class="form-group">
                                 <label>学生会简介</label>
@@ -47,26 +53,32 @@
                             <div class="form-group">
                                 <label>学生会简介更多</label>
                                 <input type="text" class="form-control" name="xjsu_introduction_more" placeholder="文章id" value="{{ $xjsu_introduction_more }}">
+                                <span class="help-block">文章id</span>
                             </div>
                             <div class="form-group">
                                 <label>主席团风采</label>
                                 <textarea class="form-control" style="height: 10em;" name="presidium" placeholder="姓名||文章id||简介&#10;姓名||文章id||简介&#10;...">{{ $presidium }}</textarea>
+                                <span class="help-block">姓名||文章id||简介</span>
                             </div>
                             <div class="form-group">
                                 <label>部门介绍</label>
                                 <textarea class="form-control" style="height: 10em;" name="ministers" placeholder="部门名称||文章id&#10;部门名称||文章id&#10;...">{{ $ministers }}</textarea>
+                                <span class="help-block">部门名称||文章id</span>
                             </div>
                             <div class="form-group">
                                 <label>校园网址速达</label>
                                 <textarea class="form-control" style="height: 10em;" name="links" placeholder="名称||网址&#10;名称||网址&#10;...">{{ $links }}</textarea>
+                                <span class="help-block">名称||网址</span>
                             </div>
                             <div class="form-group">
                                 <label>联系我们链接</label>
                                 <input type="text" class="form-control" name="contact_us" placeholder="文章id" value="{{ $contact_us }}">
+                                <span class="help-block">文章id</span>
                             </div>
                             <div class="form-group">
                                 <label>网站简介链接</label>
                                 <input type="text" class="form-control" name="about_website" placeholder="文章id" value="{{ $about_website }}">
+                                <span class="help-block">文章id</span>
                             </div>
                         </div>
                     </div>

@@ -16,6 +16,7 @@ class OptionController extends Controller
     {
         $body_prepend = Option::getOption('body_prepend', '');
         $carousels = Option::getOption('carousels', []);
+        $member_count = Option::getOption('member_count', '191954');
         $xjsu_introduction = Option::getOption('xjsu_introduction', '');
         $xjsu_introduction_more = Option::getOption('xjsu_introduction_more', '');
         $ministers = Option::getOption('ministers', []);
@@ -44,6 +45,7 @@ class OptionController extends Controller
         return view('admin.options.edit', compact(
             'body_prepend',
             'carousels',
+            'member_count',
             'xjsu_introduction',
             'xjsu_introduction_more',
             'presidium',
@@ -63,6 +65,7 @@ class OptionController extends Controller
     {
         $body_prepend = request('body_prepend', '');
         $carousels = request('carousels', '');
+        $member_count = request('member_count', '191954');
         $xjsu_introduction = request('xjsu_introduction', '');
         $xjsu_introduction_more = request('xjsu_introduction_more', '');
         $presidium = request('presidium', '');
@@ -131,6 +134,7 @@ class OptionController extends Controller
 
         Option::setOption('body_prepend', $body_prepend);
         Option::setOption('carousels', $carousels);
+        Option::setOption('member_count', $member_count);
         Option::setOption('xjsu_introduction', $xjsu_introduction);
         Option::setOption('xjsu_introduction_more', $xjsu_introduction_more);
         Option::setOption('presidium', $presidium);

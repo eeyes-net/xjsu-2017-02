@@ -17,12 +17,11 @@
         </div>
 
         <!-- search form (Optional) -->
-        <form action="#" method="get" class="sidebar-form">
+        <form action="{{ action('Admin\PostController@index') }}" class="sidebar-form">
             <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="搜索...">
+                <input type="text" name="s" class="form-control" placeholder="搜索文章...">
                 <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
+                <button type="submit" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
               </span>
             </div>
         </form>
@@ -34,13 +33,13 @@
             <!-- Optionally, you can add icons to the links -->
             <li class="active">
                 <a href="{{ action('Admin\\IndexController@index') }}">
-                    <i class="fa fa-link"></i>
+                    <i class="fa fa-home"></i>
                     <span>首页</span>
                 </a>
             </li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-link"></i>
+                    <i class="fa fa-file"></i>
                     <span>文章</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
@@ -54,17 +53,11 @@
                     @endforeach
                 </ul>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-link"></i>
+            <li>
+                <a href="{{ action('Admin\OptionController@edit') }}">
+                    <i class="fa fa-gear"></i>
                     <span>设置</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
                 </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ action('Admin\\OptionController@edit') }}">设置</a></li>
-                </ul>
             </li>
         </ul>
         <!-- /.sidebar-menu -->

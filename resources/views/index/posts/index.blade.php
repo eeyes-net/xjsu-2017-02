@@ -8,12 +8,9 @@
 @stop
 
 @section('main')
-    @foreach($posts as $post)
-        <article>
-            <h1><a href="{{ action('PostController@show', ['id' => $post->id]) }}">{{ $post->title }}</a></h1>
-        </article>
-    @endforeach
-    {{ $posts->links() }}
+    <?php $news = $posts ?>
+    @include('index.index.layouts.news')
+{{--    {{ $posts->links() }}--}}
 @stop
 
 @section('footer')

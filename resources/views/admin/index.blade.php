@@ -31,7 +31,8 @@
                     </div>
                     <div class="box-body">
                         <a class="btn btn-default" href="{{ action('Admin\PostController@index') }}">所有文章</a>
-                        {{--<a class="btn btn-default" href="{{ action('Admin\OptionController@index') }}">设置</a>--}}
+                        <a class="btn btn-default" href="{{ action('Admin\PostController@create') }}">撰写新文章</a>
+                        <a class="btn btn-default" href="{{ action('Admin\OptionController@edit') }}">设置</a>
                     </div>
                 </div>
             </section>

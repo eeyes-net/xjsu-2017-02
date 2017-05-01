@@ -14,7 +14,16 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::paginate();
+        $s = request('s');
+        if (!empty($s)) {
+            $s = escape_like($s);
+            $posts = Post::where('title', 'like', '%' . $s . '%')
+                ->orWhere('body', 'like', '%' . $s . '%')
+                ->latest()
+                ->paginate();
+        } else {
+            $posts = Post::latest()->paginate();
+        }
         return view('admin.posts.index', compact('posts'));
     }
 

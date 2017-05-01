@@ -717,9 +717,18 @@ body {
 
 /* about minister */
 
-.about-minister-table {
+.about-minister-body-list {
     margin: 0 auto;
     width: 1144px;
+    text-align: center;
+    font-size: 0;
+}
+
+.about-minister-body-li {
+    margin: 20px 0;
+    width: 11.1%;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .about-minister-card {

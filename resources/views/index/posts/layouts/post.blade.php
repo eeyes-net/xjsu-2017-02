@@ -2,8 +2,8 @@
     <div class="post-title-container">
         <h1 class="post-title">{{ $post->title }}</h1>
         <div class="post-title-info-container">
-            <div class="post-title-info author"><span class="post-title-info-text">{{ $post->getMeta('author') }}</span></div>
-            <div class="post-title-info time"><span class="post-title-info-text">{{ date('Y-m-d H:i', strtotime($post->getMeta('time'))) }}</span></div>
+            <div class="post-title-info author"><span class="post-title-info-text">{{ date('Y-m-d H:i', strtotime($post->created_at)) }}</span></div>
+            <div class="post-title-info time"><span class="post-title-info-text">{{ $post->getMeta('time') ? date('Y-m-d H:i', strtotime($post->getMeta('time'))) : '' }}</span></div>
             <div class="post-title-info visit-count"><span class="post-title-info-text">{{ $post->getMeta('visit_count') }}</span></div>
         </div>
     </div>
