@@ -14,6 +14,7 @@ class IndexController extends Controller
      */
     public function index()
     {
+        Option::setOption('index_visit_count', Option::getOption('index_visit_count', 0) + 1);
         $carousels = Option::getOption('carousels', []);
         $xjsu_introduction = Option::getOption('xjsu_introduction');
         $xjsu_introduction_more = Option::getOption('xjsu_introduction_more');

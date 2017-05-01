@@ -26,13 +26,24 @@
             <section class="col-lg-7 connectedSortable">
                 <div class="box box-info">
                     <div class="box-header">
-                        <i class="fa fa-book"></i>
+                        <i class="fa fa-link"></i>
                         <h3 class="box-title">链接</h3>
                     </div>
                     <div class="box-body">
                         <a class="btn btn-default" href="{{ action('Admin\PostController@index') }}">所有文章</a>
                         <a class="btn btn-default" href="{{ action('Admin\PostController@create') }}">撰写新文章</a>
                         <a class="btn btn-default" href="{{ action('Admin\OptionController@edit') }}">设置</a>
+                    </div>
+                </div>
+                <div class="box box-info">
+                    <div class="box-header">
+                        <i class="fa fa-user"></i>
+                        <h3 class="box-title">网站访问量</h3>
+                    </div>
+                    <div class="box-body">
+                        <p>主页访问量：{{ \App\Option::getOption('index_visit_count', 0) }}</p>
+                        <p>文章访问量：{{ \App\Option::getOption('post_visit_count', 0) }}</p>
+                        <p>文章列表访问量：{{ \App\Option::getOption('post_index_visit_count', 0) }}</p>
                     </div>
                 </div>
             </section>
