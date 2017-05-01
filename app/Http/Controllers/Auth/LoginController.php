@@ -42,7 +42,7 @@ class LoginController extends Controller
     {
         \phpCAS::forceAuthentication();
         $username = \phpCAS::getUser();
-        $user = User::where('name', $username)->first();
+        $user = User::where('username', $username)->first();
         if (!$user) {
             return response('You are not authorized.', 403);
         }

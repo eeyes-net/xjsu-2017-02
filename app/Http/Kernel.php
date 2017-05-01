@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\MustAdmin;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -51,6 +52,7 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
+        'must_admin' => \App\Http\Middleware\MustAdmin::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,

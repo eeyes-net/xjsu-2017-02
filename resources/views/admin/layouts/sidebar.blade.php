@@ -53,6 +53,14 @@
                     @endforeach
                 </ul>
             </li>
+            @if (in_array(auth()->user()->group, ['root', 'admin']))
+            <li>
+                <a href="{{ action('Admin\UserController@index') }}">
+                    <i class="fa fa-user"></i>
+                    <span>用户</span>
+                </a>
+            </li>
+            @endif
             <li>
                 <a href="{{ action('Admin\OptionController@edit') }}">
                     <i class="fa fa-gear"></i>

@@ -44,6 +44,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::patch('{id}', 'PostController@update');
         Route::delete('{id}', 'PostController@destroy');
     });
+    Route::group(['prefix' => 'users'], function () {
+        Route::get('/', 'UserController@index');
+        Route::post('/', 'UserController@store');
+        Route::delete('{id}', 'UserController@delete');
+    });
     Route::group(['prefix' => 'options'], function () {
         Route::get('/', 'OptionController@edit');
         Route::patch('/', 'OptionController@update');
