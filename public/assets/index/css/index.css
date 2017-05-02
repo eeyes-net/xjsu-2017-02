@@ -168,8 +168,8 @@ body {
 }
 
 .carousel-image {
-    height: 420px;
-    min-width: 1px;
+    width: 1366px;
+    min-height: 420px;
 }
 
 .carousel-image-ul {
@@ -179,8 +179,11 @@ body {
 
 .carousel-image-li {
     display: inline-block;
+    width: 1366px;
+    height: 420px;
     font-size: 12px;
     position: relative;
+    overflow: hidden;
 }
 
 .carousel-image-button {
